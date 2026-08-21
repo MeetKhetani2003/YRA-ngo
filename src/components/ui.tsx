@@ -7,28 +7,9 @@ export function Brand({ compact = false, light = false }: { compact?: boolean; l
   return (
     <Link href="/" className="brand" aria-label="Yuva Rojgar Abhiyan home">
       {/* YRA Logo — people/family SVG icon matching client mockup */}
-      <span className="brand-mark" style={{width:44,height:44,background:'none',borderRadius:0,overflow:'visible'}}>
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {/* Left person */}
-          <circle cx="9" cy="12" r="4.5" fill="#0f7b40"/>
-          <path d="M2 32c0-5 3-8 7-8s7 3 7 8" fill="#0f7b40"/>
-          {/* Center person (taller) */}
-          <circle cx="22" cy="10" r="5.5" fill="#0f7b40"/>
-          <path d="M14 32c0-6 3.5-10 8-10s8 4 8 10" fill="#0f7b40"/>
-          {/* Right person */}
-          <circle cx="35" cy="12" r="4.5" fill="#f5821f"/>
-          <path d="M28 32c0-5 3-8 7-8s7 3 7 8" fill="#f5821f"/>
-          {/* Small child figure - left */}
-          <circle cx="5" cy="20" r="2.5" fill="#f5821f"/>
-          <path d="M1 30c0-3 1.5-5 4-5s4 2 4 5" fill="#f5821f"/>
-        </svg>
+      <span className="brand-mark" style={{width: 200, height: 55, position: 'relative', background: 'none', borderRadius: 0, overflow: 'visible', flexShrink: 0}}>
+        <Image src="/images/logo/logo.png" alt="Yuva Rojgar Abhiyan Logo" fill sizes="200px" style={{objectFit: 'contain', objectPosition: 'left center'}} />
       </span>
-      {!compact && (
-        <span className="brand-copy">
-          <b className={light ? "text-white" : ""} style={{fontSize:22,fontWeight:800,letterSpacing:'.06em',fontFamily:'Poppins,sans-serif'}}>YRA</b>
-          <small className={light ? "text-white/65" : ""} style={{fontSize:'7.5px',letterSpacing:'.04em'}}>Yuva Rojgar Abhiyan</small>
-        </span>
-      )}
     </Link>
   );
 }
